@@ -1,0 +1,161 @@
+.header {
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px;
+  height: 60px;
+  color: white;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 100px;
+  object-fit: contain;
+  /* filter: brightness(0) invert(1);  */
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.locationLineOne {
+  font-size: 12px;
+  color: lightgray;
+}
+
+.locationLineTwo {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.searchSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 15px;
+  height: 40px;
+}
+
+.searchDropdown {
+  height: 100%;
+  border: none;
+  padding: 0 10px;
+  background-color: #f3f3f3;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.searchInput {
+  flex: 1;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.searchIcon {
+  background-color: #febd69;
+  width: 45px !important;
+  padding: 8px;
+  color: black;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flag {
+  width: 25px;
+}
+
+.languageSelect {
+  background-color: #131921;
+  color: white;
+  border: none;
+}
+
+.navItem {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.navLineOne {
+  font-size: 12px;
+}
+
+.navLineTwo {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.cartIcon {
+  font-size: 30px !important;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #f08804;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.signInItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.signInLineOne {
+  font-size: 12px;
+}
+
+.signInLineTwo {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.signInItem:hover {
+  text-decoration: underline;
+}

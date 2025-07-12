@@ -5,9 +5,6 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: space-between; */
   position: relative;
   transition: box-shadow 0.3s ease;
 }

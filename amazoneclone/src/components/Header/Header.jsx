@@ -6,6 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LowerHeader from './LowerHeader';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -14,9 +15,9 @@ function Header() {
       <header className={classes.header}>
       {/* Left Section */}
       <div className={classes.leftSection}>
-        <a href="/" className={classes.logoLink}>
+        <Link to="/" className={classes.logoLink}>
           <img src={LOGO} alt="Amazon logo" className={classes.logo} />
-        </a>
+        </Link>
 
         <div className={classes.location}>
           <LocationOnIcon className={classes.locationIcon} />
@@ -50,23 +51,23 @@ function Header() {
           </select>
         </div>
 
-        <a href="#" className={classes.signInItem}>
+        <Link to="/SignIn" className={classes.signInItem}>
           <p className={classes.signInLineOne}>Sign In</p>
           <span className={classes.signInLineTwo}>Account & Lists</span>
-        </a>
+        </Link>
 
 
         {/* Returns & Orders */}
-        <a href="#" className={classes.navItem}>
+        <Link to="/Orders" className={classes.navItem}>
           <p className={classes.navLineOne}>Returns</p>
           <span className={classes.navLineTwo}>& Orders</span>
-        </a>
+        </Link>
 
         {/* Cart */}
-        <a href="#" className={classes.cart}>
+        <Link to="/Cart" className={classes.cart}>
           <ShoppingCartIcon className={classes.cartIcon} />
           <span className={classes.cartCount}>0</span>
-        </a>
+        </Link>
       </div>
      
      

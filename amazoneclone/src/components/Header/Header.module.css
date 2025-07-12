@@ -17,7 +17,6 @@
 .logo {
   width: 100px;
   object-fit: contain;
-  /* filter: brightness(0) invert(1);  */
 }
 
 .location {

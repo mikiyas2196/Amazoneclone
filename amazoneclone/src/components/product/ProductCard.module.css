@@ -63,3 +63,44 @@
 .card:hover button {
   opacity: 1;
 }
+
+.title {
+  font-size: 15px;
+  max-width: 100%;
+  height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  line-height: 1.2;
+}
+
+
+.product_flex{
+  box-shadow: none;
+  height: auto;
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  height: 50vh;
+}
+
+.product_flex .button{
+  display: block;
+  position: static;
+  width: 150px;
+  margin-right: 40px;
+}
+.product_flex h3{
+   padding: 20px 0px;
+}
+
+.product_flex img{
+  width: 300px !important;
+  height: auto;
+}
+.descDetail{
+  color: rgb(16, 16, 85);
+  max-width: 750px;
+}

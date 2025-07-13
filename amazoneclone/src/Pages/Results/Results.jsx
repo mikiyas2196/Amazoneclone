@@ -5,19 +5,25 @@ import productURL from '../../Api/endpoints';
 import axios from 'axios';
 import ProductCard from '../../components/product/ProductCard';
 import classes from './Results.module.css'
-
+import Loader from '../../components/Loader/Loader';
 
 
 function Results() {
-
-   const [product,setproduct]= useState([]);
+   
    const {category}=useParams();
+   const [product,setproduct]= useState([]);
+   const [isLoading,setIsLoading]= useState(false);
 
    useEffect(()=>{
+       setIsLoading(true);
        axios.get(`${productURL}/products/category/${category}`)
-      .then((result)=>(setproduct(result.data)))
+      .then((result)=>{
+        setproduct(result.data)
+        setIsLoading(false)
+      })
       .catch((err)=>{
         console.error('error',err);
+        setIsLoading(false)
       })
    },[category])
    
@@ -25,7 +31,7 @@ function Results() {
 
    return (
     <Layout>
-      <div className={classes.resultsContainer}>
+      {isLoading?(<Loader />):(<div className={classes.resultsContainer}>
         <div className={classes.categoryPath}>
           <h1>Results</h1>
           <p>category / {category}</p>
@@ -37,7 +43,7 @@ function Results() {
             <ProductCard data={singleProduct} key={singleProduct.id} />
           ))}
         </section>
-      </div>
+      </div>)}  
     </Layout>
   );
 }

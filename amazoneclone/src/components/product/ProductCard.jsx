@@ -3,9 +3,11 @@ import Rating from '@mui/material/Rating';
 import CurrencyFormat from '../CurrencyFormat/CurrencyFormat';
 import classes from './ProductCard.module.css';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
 function ProductCard({ data,flex,proDesc }) {
   const { image, title, rating, price,id,description } = data;
+   const { addToCart } = useCart();
 
   return (
     <div className={`${classes.card} ${flex?classes.product_flex:''}` }>
@@ -26,7 +28,7 @@ function ProductCard({ data,flex,proDesc }) {
           <CurrencyFormat amount={price} />
         </div>
 
-        <button className={classes.addToCartButton}>Add to Cart</button>
+        <button className={classes.addToCartButton} onClick={() => addToCart(data)}>Add to Cart</button>
       </div>
     </div>
   );

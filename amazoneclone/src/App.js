@@ -1,11 +1,16 @@
 import './App.css';
 import Routing from './Routing';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
-    <div className="App">
+
+    <CartProvider>
+      <div className="App">
       <Routing />
     </div>
+    </CartProvider>
+    
   );
 }
 

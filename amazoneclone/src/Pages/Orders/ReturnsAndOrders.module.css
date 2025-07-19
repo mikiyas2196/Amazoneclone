@@ -1,0 +1,31 @@
+.ordersContainer {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.ordersList {
+  list-style: none;
+  padding: 0;
+}
+
+.orderItem {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.returnButton {
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}

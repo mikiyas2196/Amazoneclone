@@ -48,3 +48,34 @@
   text-align: center;
   color: #888;
 }
+
+.quantityRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.quantityInput {
+  width: 50px;
+  margin-left: 5px;
+  padding: 3px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.removeButton {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.removeButton:hover {
+  background: #d9363e;
+}

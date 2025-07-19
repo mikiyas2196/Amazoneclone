@@ -5,17 +5,23 @@ import { Link } from 'react-router-dom';
 import Layout from '../../components/Layout/Layout';
 
 function Cart() {
-  const { cartItems } = useCart();
+  const { cartItems, removeFromCart, updateQuantity } = useCart();
 
-  // Calculate total price
+  const handleQuantityChange = (id, value) => {
+    const quantity = parseInt(value, 10);
+    if (quantity > 0) {
+      updateQuantity(id, quantity);
+    }
+  };
+
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * (item.quantity || 1),
     0
   );
 
   return (
-   <Layout>
-    <div className={classes.cartContainer}>
+    <Layout>
+        <div className={classes.cartContainer}>
       <h2>Your Shopping Cart</h2>
       {cartItems.length === 0 ? (
         <div className={classes.emptyCart}>
@@ -31,7 +37,24 @@ function Cart() {
                 <div className={classes.cartDetails}>
                   <h4>{item.title}</h4>
                   <p>Price: ${item.price}</p>
-                  <p>Quantity: {item.quantity || 1}</p>
+                  <div className={classes.quantityRow}>
+                    <label>
+                      Quantity:
+                      <input
+                        type="number"
+                        min="1"
+                        value={item.quantity}
+                        onChange={e => handleQuantityChange(item.id, e.target.value)}
+                        className={classes.quantityInput}
+                      />
+                    </label>
+                    <button
+                      className={classes.removeButton}
+                      onClick={() => removeFromCart(item.id)}
+                    >
+                      Remove
+                    </button>
+                  </div>
                 </div>
               </li>
             ))}
@@ -43,7 +66,8 @@ function Cart() {
         </div>
       )}
     </div>
-   </Layout>   
+    </Layout>
+    
   );
 }
 
